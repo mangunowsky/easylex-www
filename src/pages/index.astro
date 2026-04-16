@@ -1,17 +1,42 @@
 ---
-
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import Section from '../components/Section.astro';
 ---
+<Layout title="Strona główna">
+  <Hero />
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+  <Section
+    heading="Przekonaj się jak Twój biznes rozwinie się z nami"
+    body="Przekonaj się, jak Twój biznes rozwinie się z nami – nasza kancelaria to nie tylko wsparcie prawne, ale również strategiczny partner w rozwoju Twojej firmy. Dzięki naszym kompleksowym usługom, pomogliśmy wielu przedsiębiorcom osiągnąć sukces, zapewniając im bezpieczne i stabilne fundamenty prawne."
+    imageSrc="/images/unsplash-image-71Dksqu7mjg.webp"
+    imageAlt="Widok na wieżowce"
+  />
+
+  <Section
+    heading="Zobacz jak skutecznie działamy"
+    body="Nasze podejście opiera się na praktycznych, sprawdzonych rozwiązaniach oraz indywidualnym dopasowaniu do potrzeb Twojej firmy. Wierzymy, że skuteczność to nie tylko szybkie rozwiązywanie problemów, ale przede wszystkim zapobieganie im zanim się pojawią."
+    imageSrc="/images/unsplash-image-3ESQPfrTV3o.webp"
+    imageAlt="Budynek biurowy"
+    reversed={true}
+  />
+
+  <Section
+    heading="Działamy nieszablonowo"
+    body="Wiemy, że każdy biznes jest inny i wymaga indywidualnego podejścia. Nie ograniczamy się do standardowych rozwiązań – stawiamy na kreatywność i elastyczność, szukając najbardziej efektywnych dróg do osiągnięcia sukcesu naszych klientów."
+    imageSrc="/images/unsplash-image-bAQH53VquTc.webp"
+    imageAlt="Architektura"
+  />
+
+  <section style="padding: var(--section-padding) 0; border-top: 1px solid var(--color-border);">
+    <div class="container">
+      <h2>Oszczędzamy Twój czas</h2>
+      <p style="max-width: 640px; margin-top: 24px;">
+        Wspieramy przedsiębiorców w dynamicznym rozwoju ich firm, eliminując z ich codziennych
+        obowiązków kwestie prawne. Z nami zyskujesz więcej niż tylko usługi prawnicze – zyskujesz
+        partnera, który zna wartość Twojego czasu. Przekonaj się, jak Twój biznes może się rozwinąć
+        dzięki naszej elastyczności, nieszablonowemu podejściu i konkretnym działaniom.
+      </p>
+    </div>
+  </section>
+</Layout>
