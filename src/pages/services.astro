@@ -1,0 +1,71 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ServiceBlock from '../components/ServiceBlock.astro';
+---
+<Layout title="Usługi">
+  <div style="padding: var(--section-padding) 0;">
+    <div class="container">
+      <h2>Obsługa prawna firm</h2>
+      <p style="max-width: 640px; margin-top: 24px; margin-bottom: 40px;">
+        W naszej kancelarii specjalizujemy się w kompleksowej obsłudze prawnej firm.
+        Niezależnie od branży, dostosowujemy nasze rozwiązania tak, aby spełniały Twoje
+        oczekiwania. Nasze podejście jest elastyczne i nieszablonowe – stawiamy na
+        efektywność i konkretne wyniki.
+      </p>
+      <a
+        href="/schedule"
+        style="font-family: var(--font-heading); font-weight: 700; font-size: 14px; letter-spacing: 0.05em; text-transform: uppercase; text-decoration: underline; color: var(--color-heading);"
+      >
+        Rozpocznijmy rozmowę o współpracy
+      </a>
+    </div>
+  </div>
+
+  <ServiceBlock
+    heading="Stała obsługa prawna"
+    items={[
+      'Stały dostęp do ekspertów – zapewniamy Klientom bieżącą pomoc prawną pozwalając im skupić się na rozwoju ich Biznesu',
+      'Stała umowa pozwala na przewidzenie miesięcznych kosztów obsługi prawnej, co ułatwia planowanie budżetu',
+      'Indywidualne podejście i zrozumienie biznesu – prawnicy mający stały kontakt z firmą lepiej rozumieją jej specyfikę',
+      'Priorytetowe traktowanie i szybkość reakcji – klienci posiadający stałą umowę otrzymują priorytetowy dostęp do usług',
+      'Minimalizacja ryzyka – prawnicy monitorują zmiany w prawie, co pomaga minimalizować ryzyko i unikać problemów',
+    ]}
+    ctaText="Twoja umowa obsługi prawnej (PDF)"
+    ctaHref="/pdfs/umowa-obslugi-prawnej.pdf"
+  />
+
+  <ServiceBlock
+    heading="Pomoc w Twojej sprawie"
+    items={[
+      'Prawo cywilne',
+      'Sprawy rodzinne',
+      'Rozwody',
+      'Odszkodowania',
+    ]}
+    ctaText="Porozmawiajmy o Twojej sprawie"
+    ctaHref="/schedule"
+  />
+
+  <ServiceBlock
+    heading="Ubezpieczenie prawne"
+    items={[
+      'Atrakcyjne warunki współpracy',
+      'Wsparcie w wymiarze dopasowanym do potrzeb',
+      'Szeroki zakres wsparcia',
+      'Dostęp do ekspertów',
+    ]}
+    ctaText="Umowa mikroabonamentu (PDF)"
+    ctaHref="/pdfs/umowa-pakiet-ochrona-prawna.pdf"
+  />
+
+  <ServiceBlock
+    heading="Pakiety dokumentów"
+    items={[
+      'Każda firma, bez względu na wielkość, potrzebuje sprawdzonych wzorów umów',
+      'Oferujemy pakiety wzorów umów adresujących potrzeby przedsiębiorstw, dostępne od ręki',
+      'Gotowe rozwiązania pozwalają skupić się na tym, co naprawdę ważne – rozwoju biznesu',
+    ]}
+    ctaText="Wybierz Twój pakiet"
+    ctaHref="/schedule"
+  />
+</Layout>
