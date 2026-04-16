@@ -1,0 +1,91 @@
+/* Fonts — fontsource imports (latin + latin-ext for Polish character support) */
+@import '@fontsource/big-shoulders-display/latin-700.css';
+@import '@fontsource/big-shoulders-display/latin-ext-700.css';
+@import '@fontsource/courier-prime/latin-400.css';
+@import '@fontsource/courier-prime/latin-ext-400.css';
+@import '@fontsource/courier-prime/latin-700.css';
+@import '@fontsource/courier-prime/latin-ext-700.css';
+
+/* CSS Variables */
+:root {
+  --color-bg: #fafafa;
+  --color-text: #28282a;
+  --color-heading: #000000;
+  --color-border: #e0e0e0;
+
+  --font-heading: 'Big Shoulders Display', sans-serif;
+  --font-body: 'Courier Prime', 'Courier New', monospace;
+
+  --container-max: 1200px;
+  --container-padding: 24px;
+  --section-padding: 80px;
+}
+
+/* Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+body {
+  min-height: 100vh;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-heading);
+  line-height: 1.05;
+}
+
+h1 {
+  font-size: clamp(80px, 12vw, 140px);
+  letter-spacing: -0.04em;
+}
+
+h2 {
+  font-size: clamp(36px, 5vw, 64px);
+  letter-spacing: -0.03em;
+}
+
+h3 {
+  font-size: 32px;
+  letter-spacing: -0.02em;
+}
+
+p {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--color-text);
+}
+
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
