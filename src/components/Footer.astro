@@ -1,0 +1,50 @@
+---
+import styles from './Footer.module.css';
+---
+<footer class={styles.footer}>
+  <div class={styles.cta}>
+    <h2>Podaj nam Twój numer telefonu</h2>
+    <p>Porozmawiajmy o Twoim Biznesie</p>
+    <form
+      class={styles.phoneForm}
+      action="https://formspree.io/f/REPLACE_WITH_FORMSPREE_ID"
+      method="POST"
+    >
+      <input
+        type="tel"
+        name="phone"
+        placeholder="Twój numer telefonu"
+        aria-label="Numer telefonu"
+      />
+      <button type="submit">Działajmy</button>
+    </form>
+    <p style="font-size:12px; margin-top:8px; color:#999;">Szanujemy Twoją prywatność</p>
+  </div>
+
+  <div class={styles.grid}>
+    <div class={styles.col}>
+      <h4>easyLEX</h4>
+      <ul>
+        <li><a href="/services">Usługi</a></li>
+        <li><a href="/information">O Nas</a></li>
+        <li><a href="/schedule">Kontakt</a></li>
+      </ul>
+    </div>
+    <div class={styles.col}>
+      <h4>Kontakt</h4>
+      <p>531 769 909</p>
+      <p>kancelaria@easylex.com.pl</p>
+    </div>
+    <div class={styles.col}>
+      <h4>Follow</h4>
+      <ul>
+        <li><a href="#" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="#" target="_blank" rel="noopener">LinkedIn</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class={styles.bottom}>
+    <p>© {new Date().getFullYear()} Kancelaria Prawna easyLEX</p>
+  </div>
+</footer>

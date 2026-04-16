@@ -1,0 +1,115 @@
+.footer {
+  background-color: var(--color-bg);
+  border-top: 1px solid var(--color-border);
+  padding: 64px var(--container-padding) 40px;
+}
+
+.cta {
+  max-width: var(--container-max);
+  margin: 0 auto 64px;
+  text-align: center;
+}
+
+.cta h2 {
+  font-size: clamp(28px, 4vw, 48px);
+  margin-bottom: 8px;
+}
+
+.cta p {
+  font-size: 14px;
+  margin-bottom: 24px;
+  color: var(--color-text);
+}
+
+.phoneForm {
+  display: flex;
+  gap: 0;
+  justify-content: center;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.phoneForm input {
+  flex: 1;
+  padding: 12px 16px;
+  font-family: var(--font-body);
+  font-size: 16px;
+  border: 1px solid var(--color-heading);
+  border-right: none;
+  background: transparent;
+  color: var(--color-text);
+  outline: none;
+}
+
+.phoneForm input::placeholder {
+  color: #999;
+}
+
+.phoneForm button {
+  padding: 12px 20px;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  background-color: var(--color-heading);
+  color: var(--color-bg);
+  border: 1px solid var(--color-heading);
+  cursor: pointer;
+}
+
+.phoneForm button:hover {
+  background-color: #333;
+}
+
+.grid {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.col h4 {
+  font-family: var(--font-heading);
+  font-size: 16px;
+  letter-spacing: 0.05em;
+  margin-bottom: 16px;
+}
+
+.col ul {
+  list-style: none;
+}
+
+.col ul li {
+  margin-bottom: 8px;
+}
+
+.col ul li a,
+.col p {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--color-text);
+}
+
+.bottom {
+  max-width: var(--container-max);
+  margin: 48px auto 0;
+  padding-top: 24px;
+  border-top: 1px solid var(--color-border);
+  text-align: center;
+}
+
+.bottom p {
+  font-family: var(--font-heading);
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  color: var(--color-text);
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
