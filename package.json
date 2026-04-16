@@ -12,6 +12,8 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@fontsource/big-shoulders-display": "^5.2.5",
+    "@fontsource/courier-prime": "^5.2.8",
     "astro": "^6.1.7"
   }
 }
