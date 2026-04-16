@@ -4,5 +4,5 @@ import { defineConfig } from 'astro/config';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://mangunowsky.github.io',
-  base: 'easylex-www',
+  base: '/easylex-www/',
 });
