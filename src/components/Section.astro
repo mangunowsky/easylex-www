@@ -1,0 +1,28 @@
+---
+import styles from './Section.module.css';
+
+interface Props {
+  heading: string;
+  body: string;
+  imageSrc: string;
+  imageAlt: string;
+  reversed?: boolean;
+}
+
+const { heading, body, imageSrc, imageAlt, reversed = false } = Astro.props;
+---
+<section class={styles.section}>
+  <div class={`${styles.inner}${reversed ? ' ' + styles.reversed : ''}`}>
+    <img
+      class={styles.image}
+      src={imageSrc}
+      alt={imageAlt}
+      width="600"
+      height="480"
+    />
+    <div class={styles.text}>
+      <h3>{heading}</h3>
+      <p>{body}</p>
+    </div>
+  </div>
+</section>
