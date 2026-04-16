@@ -1,0 +1,21 @@
+---
+import styles from './ServiceBlock.module.css';
+
+interface Props {
+  heading: string;
+  items: string[];
+  ctaText: string;
+  ctaHref: string;
+}
+
+const { heading, items, ctaText, ctaHref } = Astro.props;
+---
+<div class={styles.block}>
+  <div class={styles.inner}>
+    <h3>{heading}</h3>
+    <ul class={styles.list}>
+      {items.map(item => <li>{item}</li>)}
+    </ul>
+    <a href={ctaHref} class={styles.cta}>{ctaText}</a>
+  </div>
+</div>
