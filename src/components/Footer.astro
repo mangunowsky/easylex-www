@@ -1,5 +1,6 @@
 ---
 import styles from './Footer.module.css';
+const base = import.meta.env.BASE_URL;
 ---
 <footer class={styles.footer}>
   <div class={styles.cta}>
@@ -25,9 +26,9 @@ import styles from './Footer.module.css';
     <div class={styles.col}>
       <h4>easyLEX</h4>
       <ul>
-        <li><a href="/services">Usługi</a></li>
-        <li><a href="/information">O Nas</a></li>
-        <li><a href="/schedule">Kontakt</a></li>
+        <li><a href={`${base}services`}>Usługi</a></li>
+        <li><a href={`${base}information`}>O Nas</a></li>
+        <li><a href={`${base}schedule`}>Kontakt</a></li>
       </ul>
     </div>
     <div class={styles.col}>

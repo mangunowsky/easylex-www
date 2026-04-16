@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
 import Section from '../components/Section.astro';
+const base = import.meta.env.BASE_URL;
 ---
 <Layout title="Strona główna">
   <Hero />
@@ -9,14 +10,14 @@ import Section from '../components/Section.astro';
   <Section
     heading="Przekonaj się jak Twój biznes rozwinie się z nami"
     body="Przekonaj się, jak Twój biznes rozwinie się z nami – nasza kancelaria to nie tylko wsparcie prawne, ale również strategiczny partner w rozwoju Twojej firmy. Dzięki naszym kompleksowym usługom, pomogliśmy wielu przedsiębiorcom osiągnąć sukces, zapewniając im bezpieczne i stabilne fundamenty prawne."
-    imageSrc="/images/unsplash-image-71Dksqu7mjg.webp"
+    imageSrc={`${base}images/unsplash-image-71Dksqu7mjg.webp`}
     imageAlt="Widok na wieżowce"
   />
 
   <Section
     heading="Zobacz jak skutecznie działamy"
     body="Nasze podejście opiera się na praktycznych, sprawdzonych rozwiązaniach oraz indywidualnym dopasowaniu do potrzeb Twojej firmy. Wierzymy, że skuteczność to nie tylko szybkie rozwiązywanie problemów, ale przede wszystkim zapobieganie im zanim się pojawią."
-    imageSrc="/images/unsplash-image-3ESQPfrTV3o.webp"
+    imageSrc={`${base}images/unsplash-image-3ESQPfrTV3o.webp`}
     imageAlt="Budynek biurowy"
     reversed={true}
   />
@@ -24,7 +25,7 @@ import Section from '../components/Section.astro';
   <Section
     heading="Działamy nieszablonowo"
     body="Wiemy, że każdy biznes jest inny i wymaga indywidualnego podejścia. Nie ograniczamy się do standardowych rozwiązań – stawiamy na kreatywność i elastyczność, szukając najbardziej efektywnych dróg do osiągnięcia sukcesu naszych klientów."
-    imageSrc="/images/unsplash-image-bAQH53VquTc.webp"
+    imageSrc={`${base}images/unsplash-image-bAQH53VquTc.webp`}
     imageAlt="Architektura"
   />
 

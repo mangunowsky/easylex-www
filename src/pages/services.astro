@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import ServiceBlock from '../components/ServiceBlock.astro';
+const base = import.meta.env.BASE_URL;
 ---
 <Layout title="Usługi">
   <div style="padding: var(--section-padding) 0;">
@@ -13,7 +14,7 @@ import ServiceBlock from '../components/ServiceBlock.astro';
         efektywność i konkretne wyniki.
       </p>
       <a
-        href="/schedule"
+        href={`${base}schedule`}
         style="font-family: var(--font-heading); font-weight: 700; font-size: 14px; letter-spacing: 0.05em; text-transform: uppercase; text-decoration: underline; color: var(--color-heading);"
       >
         Rozpocznijmy rozmowę o współpracy
@@ -31,7 +32,7 @@ import ServiceBlock from '../components/ServiceBlock.astro';
       'Minimalizacja ryzyka – prawnicy monitorują zmiany w prawie, co pomaga minimalizować ryzyko i unikać problemów',
     ]}
     ctaText="Twoja umowa obsługi prawnej (PDF)"
-    ctaHref="/pdfs/umowa-obslugi-prawnej.pdf"
+    ctaHref={`${base}pdfs/umowa-obslugi-prawnej.pdf`}
   />
 
   <ServiceBlock
@@ -43,7 +44,7 @@ import ServiceBlock from '../components/ServiceBlock.astro';
       'Odszkodowania',
     ]}
     ctaText="Porozmawiajmy o Twojej sprawie"
-    ctaHref="/schedule"
+    ctaHref={`${base}schedule`}
   />
 
   <ServiceBlock
@@ -55,7 +56,7 @@ import ServiceBlock from '../components/ServiceBlock.astro';
       'Dostęp do ekspertów',
     ]}
     ctaText="Umowa mikroabonamentu (PDF)"
-    ctaHref="/pdfs/umowa-pakiet-ochrona-prawna.pdf"
+    ctaHref={`${base}pdfs/umowa-pakiet-ochrona-prawna.pdf`}
   />
 
   <ServiceBlock
@@ -66,6 +67,6 @@ import ServiceBlock from '../components/ServiceBlock.astro';
       'Gotowe rozwiązania pozwalają skupić się na tym, co naprawdę ważne – rozwoju biznesu',
     ]}
     ctaText="Wybierz Twój pakiet"
-    ctaHref="/schedule"
+    ctaHref={`${base}schedule`}
   />
 </Layout>
