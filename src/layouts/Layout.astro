@@ -18,6 +18,7 @@ const { title, description = 'Kancelaria Prawna easyLEX — obsługa prawna dla 
     <meta name="description" content={description} />
     <title>{title} — Kancelaria Prawna easyLEX</title>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
   </head>
   <body>
     <Navbar />
@@ -26,4 +27,18 @@ const { title, description = 'Kancelaria Prawna easyLEX — obsługa prawna dla 
     </main>
     <Footer />
   </body>
+  <script>
+    const ORPHAN_RE = /\b([aiouwzAIOUWZ]) /g;
+    const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+    let node = walker.nextNode();
+    while (node) {
+      const v = node.nodeValue;
+      if (v && ORPHAN_RE.test(v)) {
+        ORPHAN_RE.lastIndex = 0;
+        node.nodeValue = v.replace(ORPHAN_RE, (_, l) => l + ' ');
+      }
+      ORPHAN_RE.lastIndex = 0;
+      node = walker.nextNode();
+    }
+  </script>
 </html>

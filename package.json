@@ -12,8 +12,14 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@fontsource/anton": "^5.2.7",
+    "@fontsource/archivo-black": "^5.2.8",
+    "@fontsource/barlow-condensed": "^5.2.8",
+    "@fontsource/bebas-neue": "^5.2.7",
     "@fontsource/big-shoulders-display": "^5.2.5",
     "@fontsource/courier-prime": "^5.2.8",
+    "@fontsource/inter": "^5.2.8",
+    "@fontsource/unbounded": "^5.2.8",
     "astro": "^6.1.7"
   }
 }

@@ -1,20 +1,21 @@
 /* Fonts — fontsource imports (latin + latin-ext for Polish character support) */
-@import '@fontsource/big-shoulders-display/latin-700.css';
-@import '@fontsource/big-shoulders-display/latin-ext-700.css';
-@import '@fontsource/courier-prime/latin-400.css';
-@import '@fontsource/courier-prime/latin-ext-400.css';
-@import '@fontsource/courier-prime/latin-700.css';
-@import '@fontsource/courier-prime/latin-ext-700.css';
+@import '@fontsource/archivo-black/latin-400.css';
+@import '@fontsource/archivo-black/latin-ext-400.css';
+@import '@fontsource/anton/latin-400.css';
+@import '@fontsource/inter/latin-400.css';
+@import '@fontsource/inter/latin-ext-400.css';
+@import '@fontsource/inter/latin-700.css';
+@import '@fontsource/inter/latin-ext-700.css';
 
 /* CSS Variables */
 :root {
   --color-bg: #fafafa;
   --color-text: #28282a;
   --color-heading: #000000;
-  --color-border: #e0e0e0;
+  --color-border: #a0a0a0;
 
-  --font-heading: 'Big Shoulders Display', sans-serif;
-  --font-body: 'Courier Prime', 'Courier New', monospace;
+  --font-heading: 'Archivo Black', sans-serif;
+  --font-body: 'Inter', sans-serif;
 
   --container-max: 1200px;
   --container-padding: 24px;
@@ -82,6 +83,8 @@ p {
   font-size: 16px;
   line-height: 1.7;
   color: var(--color-text);
+  text-align: justify;
+  text-wrap: pretty;
 }
 
 .container {
