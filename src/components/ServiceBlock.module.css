@@ -9,6 +9,25 @@
   padding: 0 var(--container-padding);
 }
 
+.withImage {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.reversed {
+  direction: rtl;
+}
+
+.reversed .content {
+  direction: ltr;
+}
+
+.reversed .imageWrap {
+  direction: ltr;
+}
+
 .block h3 {
   margin-bottom: 24px;
 }
@@ -48,4 +67,32 @@
 
 .cta:hover {
   text-decoration: none;
+}
+
+.imageWrap {
+  width: 100%;
+  height: 480px;
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .withImage {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .reversed {
+    direction: ltr;
+  }
+
+  .imageWrap {
+    height: 280px;
+  }
 }

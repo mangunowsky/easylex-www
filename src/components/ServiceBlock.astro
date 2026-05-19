@@ -6,16 +6,26 @@ interface Props {
   items: string[];
   ctaText: string;
   ctaHref: string;
+  imageSrc?: string;
+  imageAlt?: string;
+  reversed?: boolean;
 }
 
-const { heading, items, ctaText, ctaHref } = Astro.props;
+const { heading, items, ctaText, ctaHref, imageSrc, imageAlt = '', reversed = false } = Astro.props;
 ---
 <div class={styles.block}>
-  <div class={styles.inner}>
-    <h3>{heading}</h3>
-    <ul class={styles.list}>
-      {items.map(item => <li>{item}</li>)}
-    </ul>
-    <a href={ctaHref} class={styles.cta}>{ctaText}</a>
+  <div class={`${styles.inner} ${imageSrc ? styles.withImage : ''} ${imageSrc && reversed ? styles.reversed : ''}`}>
+    <div class={styles.content}>
+      <h3>{heading}</h3>
+      <ul class={styles.list}>
+        {items.map(item => <li>{item}</li>)}
+      </ul>
+      <a href={ctaHref} class={styles.cta}>{ctaText}</a>
+    </div>
+    {imageSrc && (
+      <div class={styles.imageWrap}>
+        <img src={imageSrc} alt={imageAlt} class={styles.image} />
+      </div>
+    )}
   </div>
 </div>
